@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!dataEgg">NO DATA</div>
+  <div v-if="!dataEgg"><h1>No data</h1></div>
   <div v-else>
     {{ dataEgg }}
   </div>
