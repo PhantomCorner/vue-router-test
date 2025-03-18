@@ -1,6 +1,8 @@
 <template>
-  <h1>Content</h1>
-  {{ dataEgg }}
+  <div v-if="!dataEgg">NO DATA</div>
+  <div v-else>
+    {{ dataEgg }}
+  </div>
 </template>
 <script>
 import data from "../data.json";

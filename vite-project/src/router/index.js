@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import home from "../views/home.vue";
 import Eggs from "../views/Eggs.vue";
+import NotFound from "../views/NotFound.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -8,6 +9,15 @@ const router = createRouter({
     {
       path: "/eggs/:eggType",
       component: Eggs,
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      redirect: "/404",
+    },
+    {
+      path: "/404",
+      name: "404",
+      component: NotFound,
     },
   ],
 });
